@@ -1,0 +1,75 @@
+.newsletter{
+
+    .container{
+        @include common_container-options;
+        padding-bottom: 130px;
+        text-align: center;
+        @media (max-width:770px){
+           padding-bottom: 40px;
+        }
+
+        .newsletter__title{
+            @include newsletter_title;
+            @media (max-width:770px){
+                font-size: $M-subtitle_font-size;
+            }
+            @media (max-width:540px){
+                font-size: $S-subtitle_font-size;
+                line-height: 60px;
+            }
+        }
+        .newsletter__subtitle{
+            @include newsletter_subtitle;
+            @media (max-width:770px){
+                font-size: $main_font-size; 
+            }
+            @media (max-width:540px){
+               font-size: 0.875em; 
+               line-height: 20px;
+            }
+        }
+        .newsletter_input{
+            max-width: 580px;
+            text-align: center;
+            margin: 60px auto;
+            vertical-align: top;
+            @media (max-width:770px){
+                margin: 30px auto;
+                
+            }
+
+            input[type=text]{
+                right: 0;
+                height: 52px;
+                width: 480px;
+                padding: 15px;
+                font-size: $main_font-size;
+                border: 1px solid $border_color;
+                display: inline-block;
+                position: relative;
+                outline: none;
+                @media (max-width:770px){
+                    width: 50%;
+                    height: 40px;
+                    font-size: 0.875em;
+                }
+            }
+            button{
+                height: 52px;
+                width: 90px;
+                font-size: $main_font-size;
+                position: relative;
+                color: #feeee4;
+                right: 4px;
+                border: 1px solid #e67429;
+                background-color: #f68236;
+                @media (max-width:770px){
+                    height: 40px;
+                    width: 70px;
+                    font-size: 0.875em;
+                    top: -1px;
+                }
+            }
+        }
+    }
+}

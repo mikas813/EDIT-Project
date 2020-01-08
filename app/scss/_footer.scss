@@ -1,0 +1,98 @@
+.footer{
+    .container{
+        @include common_container-options;
+        display: flex;
+        justify-content: space-around;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        font-size: $header-footer_font-size;
+        line-height: 18px;
+        font-family: $main_font;
+        color: $main_font-color;
+        @media(max-width: 840px){
+            display: flex;
+            flex-wrap: wrap;
+            padding: 25px 30px;
+        }
+        @media(max-width: 440px){
+            padding: 25px 15px;
+            
+        }
+        a{
+            &:hover{
+                border-bottom: 1px solid $border-color;
+            }
+        }
+        div + div{
+            border-left: 1px solid $border-color;
+        }
+        .footer__list{
+            padding-left: 20px;
+            width: 20%;
+
+            @media(max-width: 840px){
+                border-left: 1px solid $border-color;
+                width: 50%;
+                line-height: 20px;
+                margin-bottom: 10px;
+            }   
+            @media(max-width: 440px){
+                padding-left: 10px;
+            }
+
+           span{
+                font-weight: 600;
+                line-height: 30px;
+            }
+            .social-link{
+                border: 1px solid $border-color;
+                margin: 20px 12px 18px 0;
+                display: inline-block; 
+                width: 32px;
+                height: 32px;
+                position: relative;
+                @media(max-width: 440px){
+                    border: 1px solid $border-color;
+                    margin: 20px 10px 18px 0;
+                    width: 32px;
+                    height: 32px;
+                    position: relative;
+                }
+            }
+            .twitter-icon{
+                &::before{
+                    content: '';
+                    background-image: url(../images/icons/twitter-icon.svg);
+                    width: 16px;
+                    position: absolute;
+                    height: 14px;
+                    left: 8px;
+                    top: 7px;
+                }
+            }
+            .facebook-icon{
+                &::before{
+                    content: '';
+                    background-image: url(../images/icons/fb-icon.svg);
+                    width: 8px;
+                    position: absolute;
+                    height: 15px;
+                    left: 10px;
+                    top: 6px;
+                }
+            }
+            .instagram-icon{
+                &::before{
+                    content: '';
+                    background-image: url(../images/icons/insta-icon.svg);
+                    width: 8px;
+                    position: absolute;
+                    width: 17px;
+                    height: 15px;
+                    left: 7px;
+                    top: 7px; 
+                } 
+            }
+        } 
+    }
+}

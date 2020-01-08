@@ -1,0 +1,50 @@
+.about{
+    font-size: $main_font-size;
+    font-family: $main_font;
+    color: $main_font-color;
+
+     .container{
+        @include common_container-options;
+         .about_images{
+            padding-top: 80px;
+            width: 94%;
+            margin: 0 auto;
+            .left_image{
+                width: 49.5%;
+                height: 270px;
+    
+            }
+            .right_image{
+                width: 49.5%;
+                height: 270px;
+            }
+        }
+        .about_text{
+            width: 94%;
+            margin: 0 auto;
+            padding-top: 55px;
+            padding-bottom: 70px;
+            p{
+                
+                margin-top: 30px;
+                line-height: 20px;
+                width: 75%;
+            }
+            .about_text_left-box{
+                vertical-align: top;
+                width: 50%;
+                display: inline-block;
+            }
+            .about_text_right-box{
+                height: auto;
+                width: 49%;
+                display: inline-block;
+            }    
+        }
+    }
+}
+    
+   
+        
+    
+    

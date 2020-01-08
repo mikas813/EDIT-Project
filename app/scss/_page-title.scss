@@ -1,0 +1,51 @@
+.page__title{
+    .container{
+        @include common_container-options;
+        .title__inner{
+            padding: 115px 0px;
+            margin: 0px 10px;
+            text-align: center;
+            @media (max-width: 960px){
+            }
+            @media (max-width: 770px){
+                padding: 70px 0px;
+            }
+            @media (max-width: 540px){
+                padding: 60px 0px;
+            } 
+            @media (max-width: 540px){
+                padding: 50px 0px;
+            } 
+
+            h2{
+                @include main_title-options;
+                @media (max-width: 770px){
+                    font-size: $L-title_font-size;
+                }
+                @media (max-width: 540px){
+                    font-size: $M-subtitle_font-size;
+                    line-height: 60px;
+                }
+                @media (max-width: 540px){
+                    font-size: $S-subtitle_font-size;
+                    line-height: 60px;
+                }
+
+
+            }
+            p{
+                @include subtitle_options;
+                @media (max-width: 770px){
+                    font-size: $S-subtitle_font-size;
+                }
+                @media (max-width: 540px){
+                    font-size: $main_font-size;
+                }
+                @media (max-width: 540px){
+                    font-size: 0.875em;        
+                }
+
+            }   
+        }
+    }
+}
