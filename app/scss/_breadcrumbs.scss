@@ -15,5 +15,16 @@
                 }
             }
         }
+        @media (max-width: 480px) {
+            font-size: 10px;
+            li + li{
+                margin-left: 20px;
+                &::before{
+                    position: absolute;
+                    left: -12px;
+                    content: '/';
+                }
+            }
+        }
     }
 }
