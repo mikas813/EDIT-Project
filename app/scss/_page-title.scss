@@ -1,42 +1,46 @@
 .page__title{
     .container{
-        @include common_container-options;
         .title__inner{
             padding: 115px 0px;
             margin: 0px 10px;
             text-align: center;
-            @media (max-width: 960px){
-            }
             @media (max-width: 770px){
-                padding: 70px 0px;
+                padding: 60px 0px;
             }
             @media (max-width: 540px){
-                padding: 60px 0px;
+                padding: 40px 0px;
             } 
             @media (max-width: 540px){
-                padding: 50px 0px;
+                padding: 30px 0px;
             } 
 
             h2{
-                @include main_title-options;
+                font-family: $main_font;
+                font-size: $XXL-title_font-size;
+                line-height: 120px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                color: $main_font-color;
+                @media (max-width: 1000px){
+                    font-size: $XL-title_font-size;
+                }
                 @media (max-width: 770px){
                     font-size: $L-title_font-size;
                 }
                 @media (max-width: 540px){
-                    font-size: $M-subtitle_font-size;
-                    line-height: 60px;
+                    font-size: $M-title_font-size;
+                    line-height: 36px;
                 }
-                @media (max-width: 540px){
-                    font-size: $S-subtitle_font-size;
-                    line-height: 60px;
-                }
-
-
             }
             p{
-                @include subtitle_options;
+                line-height: 30px;
+                font-size: $M-title_font-size;
+                color: $secondary_font-color;
+                font-style: italic;
+                letter-spacing: 1px;
+                font-family: $secondary_font;
                 @media (max-width: 770px){
-                    font-size: $S-subtitle_font-size;
+                    font-size: $S-title_font-size;
                 }
                 @media (max-width: 540px){
                     font-size: $main_font-size;
@@ -45,7 +49,37 @@
                     font-size: 0.875em;        
                 }
 
-            }   
+            }  
+            .title__button{
+                position: relative;
+                margin-top: 65px;
+                display: inline-block;
+                width: 230px;
+                height: 65px;
+                border: 1px solid $border-color;
+                margin-bottom: 35px;
+                &:hover{
+                    border: 1px solid $btn_border-color;
+                    background-color: $btn_color;
+                    color: #fff;
+                    transition: all .3s;
+                }
+                a{
+                    position: absolute;
+                    display: block;
+                    text-transform: uppercase;
+                    font-size: 0.875em;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    min-width: 180px;
+                } 
+                @media (max-width: 770px){
+                    width: 175px;
+                    height: 40px;
+                    font-size: 0.875em;
+                }
+            }
         }
     }
 }
