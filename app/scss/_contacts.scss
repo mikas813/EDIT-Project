@@ -7,12 +7,15 @@
     font-size: 12px;
     line-height: 36px;
     position: relative;
+    @media (max-width: 590px) {
+        padding: 30px 0px 50px;
+    }
     select{
         appearance: none;
         max-width: 580px;
         width: 100%;
         background: none;
-        border: 1px solid #c2c2c2;
+        border: 1px solid $border-color;
         padding: 10px;
         border-radius: 0;
         font-size: 1rem;   
@@ -37,6 +40,7 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 45px;
+        flex-wrap: wrap;
         .user__input,
         .email__input{
             max-width: 280px;
@@ -44,8 +48,9 @@
             .input{
                 width: 100%;
                 padding: 10px;
+                border: 1px solid $border-color;
                 & + .input{
-                    margin-left: 20px;
+                    margin-left: 40px;
                 }
             }
         }
@@ -57,9 +62,13 @@
         height: 200px;
         border-color: #c2c2c2;
         resize: none;
-        margin-bottom: 45px;
+        margin-bottom: 45px;        
+        border: 1px solid $border-color;
         padding: 0px 15px 15px;
         font-size: 14px;
+        @media (max-width: 420px) {
+            height: 120px;
+        }
     }
     button{
         background-color: $btn-color;
@@ -70,6 +79,8 @@
         left: 0;
         right: 0;
         display: block;
-
+        @media (max-width: 420px) {
+            padding: 10px 50px;
+        }
     }
 }

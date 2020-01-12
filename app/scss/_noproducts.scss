@@ -1,0 +1,27 @@
+.noproducts{
+    .some__text{
+        padding: 85px 0 25px;
+        line-height: 24px;
+        font-size: 14px;
+        max-width: 620px;
+        margin: 0 auto;
+        text-align: center;
+        color: $secondary-font-color;
+        @media (max-width: 770px) {
+            padding: 40px;
+        }
+    }
+    .aditional__links{
+        line-height: 24px;
+        font-size: 14px;
+        text-align: center;
+        color: $secondary-font-color;
+        padding-bottom: 100px;
+        a{
+            color: $link-color;
+        }
+        @media (max-width: 770px) {
+            padding-bottom: 40px;
+        }
+    }
+}
