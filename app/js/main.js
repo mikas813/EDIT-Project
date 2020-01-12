@@ -1,6 +1,4 @@
-//slider top
-$(function(){
-
+$(function(){//top slider options
     $('.slider__inner').slick({
         arrows: false,
         dots: false,
@@ -12,8 +10,7 @@ $(function(){
     
   
 }); 
-//slider bottom
-$(function(){
+$(function(){//slider bottom options 
     $('.carousel__inner').slick({
         slidesToShow: 5,
         slidesToScroll: 1,
@@ -62,7 +59,7 @@ $(function(){
                 settings: {
                   arrows: true,
                   centerMode: true,
-                  centerPadding: '40px',
+                  centerPadding: '20px',
                   slidesToShow: 1,
                 }
               },
@@ -71,35 +68,20 @@ $(function(){
       });
 
     $( ".mobile__menu" ).click(function() {
-      $(".navigation").toggle(); //change display none to display block!
+      $(".navigation").toggle(); //change display none to display block by clicking on burger menu and shows responsive site navigation!
   });
-  // $( ".header__basket" ).click(function() {
-  //     $(".basket__box").slideToggle("slow"); //change display none to display block!
-  // });
- 
 
-   
   $('.mobile__menu').on('click', function(){
-    $('.menu__row').toggleClass('active');//by clicking add a 'class'
-
+    $('.menu__row').toggleClass('active');//by clicking add a 'class' to midle burger row to change its options to display none on click!
   });
-  $('.mobile__menu').on('click', function(){
-    $('.header .container .header__inner .mobile__menu .menu__row::after').toggleClass('active');//by clicking add a 'class'
-
-  });
-
-
     //header search button
     $('.header__search-btn-img').on('click', function(){
       $('.search-area').toggleClass('text__area');
     });
 
     $('.header__search-btn-img').on('click', function(){
-      $('.header__search-btn-img').toggleClass('active');//by clicking add a 'class'
+      $('.header__search-btn-img').toggleClass('active');//by clicking add a 'class' to header search button and change for this class margin left to 140px!
 
     });
- 
-
-
   });
   

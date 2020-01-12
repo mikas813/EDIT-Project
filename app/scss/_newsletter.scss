@@ -1,32 +1,10 @@
 .newsletter{
 
     .container{
-        @include common_container-options;
         padding-bottom: 130px;
         text-align: center;
         @media (max-width:770px){
            padding-bottom: 40px;
-        }
-
-        .newsletter__title{
-            @include newsletter_title;
-            @media (max-width:770px){
-                font-size: $M-subtitle_font-size;
-            }
-            @media (max-width:540px){
-                font-size: $S-subtitle_font-size;
-                line-height: 60px;
-            }
-        }
-        .newsletter__subtitle{
-            @include newsletter_subtitle;
-            @media (max-width:770px){
-                font-size: $main_font-size; 
-            }
-            @media (max-width:540px){
-               font-size: 0.875em; 
-               line-height: 20px;
-            }
         }
         .newsletter_input{
             max-width: 580px;

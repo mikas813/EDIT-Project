@@ -1,154 +1,165 @@
 .grid{
     color: #fff;
-    .container{
-        @include common_container-options;
-        .grid__inner{
-            padding-bottom: 140px;
+    .grid__inner{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 140px;
+        @media (max-width: 960px){
+            flex-wrap: wrap;
             display: flex;
+        }
+        @media (max-width: 770px){
+            display: flex;
+            padding-bottom: 70px;
+            flex-wrap: wrap;
+        }
+        .grid__column{
+            flex-wrap: wrap;
+            width: 25%;
+            display: flex;
+            @media (max-width: 960px){
+                width: 45%;
+            }  
+            @media (max-width: 770px){
+                width: 90%;
+            }
+        } 
+        .grid__item{
+            text-align: center;
+            min-height: 295px;
+            padding: 0px 55px;
+            display: flex;
+            align-items: center;
             justify-content: center;
-                @media (max-width: 960px){
-                    flex-wrap: wrap;
-                    display: flex;
+            width: 100%;
+            @media (max-width: 770px){
+                padding: 0px 25px;
+                min-height: 200px;
+                min-height: 250px;
+            }
+            h3{
+                text-transform: uppercase;
+                font-weight: bold;
+                line-height: 27px;
+                letter-spacing: 1px;
+                font-size: $M-title_font-size;
+                font-family: $main_font;
+                @media (max-width: 770px){
+                    font-size: $S-title_font-size;
                 }
                 @media (max-width: 770px){
-                    flex-wrap: wrap;
-                    display: flex;
-                    padding-bottom: 70px;
+                    font-size: $S-title_font-size;
                 }
-            .grid__column{
-                display: flex;
-                flex-wrap: wrap;
-                width: 25%;
-                @media (max-width: 960px){
-                    width: 45%;
-                }  
+            }
+            span{
+                font-style: italic;
+                line-height: 27px;
+                font-size: $S-title_font-size;
+                font-family: $secondary_font;
                 @media (max-width: 770px){
-                    width: 90%;
-                } 
+                    font-size: $main_font-size;
+                }
             }
-            .grid__item{
-                width: 100%;
-                text-align: center;
-                min-height: 295px;
-                padding: 0px 55px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+            p{
+                font-size: 0.875em;
+                line-height: 19px;
+                font-family: $secondary_font;
                 @media (max-width: 770px){
-                    min-height: 250px;
-                    padding: 0px 25px;
-                    min-height: 200px;
+                    line-height: 18px;
+                    font-size: 0.990em;
                 }
-                h3{
-                    @include grid_title;
-                    @media (max-width: 770px){
-                        font-size: $S-subtitle_font-size;
-                    }
-                     @media (max-width: 770px){
-                        font-size: $S-subtitle_font-size;
-                    }
-                }
-                span{
-                    @include grid-subtitle;
-                    @media (max-width: 770px){
-                        font-size: $main_font-size;
-                    }
-                }
-                p{
-                    @include grid_text;
-                    @media (max-width: 770px){
-                        font-size: 0.990em;
-                        line-height: 18px;
-                    }
-                    @media (max-width: 470px){
-                        font-size: 0.680em;
-                        line-height: 16px;
-                    }
-                }
-                a{
-                    display: block;
-                    font-weight: 800;
-                    font-size: 0.875em;
-                    margin-top: 22px;
-                    @media (max-width: 770px){
-                        margin: 10px 0 0;
-                    }
+                @media (max-width: 470px){
+                    line-height: 16px;
+                    font-size: 0.680em;
                 }
             }
-            .grid__item-1{
-                background-color: $grid_item_1-col;
-                height: $tall_box-height;
+            a{
+                font-weight: 800;
+                font-size: 0.875em;
+                margin-top: 22px;
+                display: block;
                 @media (max-width: 770px){
-                    height: 500px;
+                    margin: 10px 0 0;
                 }
+            }
+        }
+        .grid__item-1{
+            height: $tall_box-height;
+            background-color: $grid_item_1-col;
+            @media (max-width: 770px){
+                height: 500px;
+            }
+            @media (max-width: 770px){
+                height: 400px;
+            }
+        }    
+        .grid__item-2{
+            background-color: $grid_item_2-col;
+        }
+        .grid__item-3{
+            background-color: $grid_item_3-col;
+        }
+        .grid__item-4{
+            background-color: $grid_item_4-col;
+        }
+        .grid__item-5{
+            background-color: $grid_item_5-col;
+        }
+        .grid__item-6{
+            background-color: $grid_item_6-col;
+        }
+        .grid__item-7{
+            background-color: $grid_item_7-col;
+        }
+        .grid__item-8{
+            background-color: $grid_item_8-col;
+        }
+        .grid__item-9{
+            background-color: $grid_item_9-col;
+        }
+        .grid__item-10{
+            height: $tall_box-height;
+            background-color: $grid_item_10-col;
+            @media (max-width: 770px){
+                height: 500px;
+            }
+            @media (max-width: 770px){
+                height: 400px;
+            } 
+        }
+        .grid__item-inner-3,
+        .grid__item-inner-7{
+            position: relative;
+            &::before{
+                background-image: url(../images/icons/grid_twirer-icon.png);
+                width: 99px;
+                height: 25px;
+                top: -35%;
+                left: 50%;
+                transform: translateX(-50%);
+                content: '';  
+                position: absolute;
                 @media (max-width: 770px){
-                    height: 400px;
-                }    
-            }
-            .grid__item-2{
-                background-color: $grid_item_2-col;
-            }
-            .grid__item-3{
-                background-color: $grid_item_3-col;
-            }
-            .grid__item-4{
-                background-color: $grid_item_4-col;
-            }
-            .grid__item-5{
-                background-color: $grid_item_5-col;
-            }
-            .grid__item-6{
-                background-color: $grid_item_6-col;
-            }
-            .grid__item-7{
-                background-color: $grid_item_7-col;
-            }
-            .grid__item-8{
-                background-color: $grid_item_8-col;
-            }
-            .grid__item-9{
-                background-color: $grid_item_9-col;
-            }
-            .grid__item-10{
-                background-color: $grid_item_10-col;
-                height: $tall_box-height;
-                @media (max-width: 770px){
-                    height: 500px;
-                }
-                @media (max-width: 770px){
-                    height: 400px;
-                } 
-
-            }
-            .grid__item-inner-3,
-            .grid__item-inner-7{
-                position: relative;
-                &::before{
-                    position: absolute;
-                    background-image: url(../images/icons/grid_twirer-icon.png);
-                    width: 99px;
-                    height: 25px;
-                    top: -45%;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    content: '';  
+                    top: -70%;
+                    
                 }
             }
-            .grid__item-inner-5,
-            .grid__item-inner-9{
-                position: relative;
-                &::before{
-                    position: absolute;
-                    background-image: url(../images/icons/grid_left-arrow.png);
-                    width: 23px;
-                    height: 13px;
-                    top: -25px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    content: '';  
-                }
+        }
+        .grid__item-inner-5,
+        .grid__item-inner-9{
+            position: relative;
+            &::before{
+                background-image: url(../images/icons/grid_left-arrow.png);
+                width: 23px;
+                height: 13px;
+                top: -25px;
+                left: 50%;
+                transform: translateX(-50%);
+                position: absolute;
+                content: '';  
             }
-
+            
         }
     }
 }
+
