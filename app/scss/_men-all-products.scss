@@ -1,0 +1,20 @@
+.pagination__indicator-inner{
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    .pagination-container{
+        display: flex;
+        }
+        .pagination__item{
+            padding: 6px 10px;
+            border: 1px solid #000;
+            & + .pagination__item{
+                margin-left: 10px;
+            }    
+        }
+        .pagination__item--current{
+            background-color: #000;
+            color: #fff;
+            // padding: 6px 10px;
+        }
+    }

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Search results</title>
+    <title>Details</title>
     <!--Generic meta-->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1, initial-scale = 1.0, shrink-to-fit=no">
@@ -45,6 +45,8 @@
     <link href="https://fonts.googleapis.com/css?family=Jomolhari&display=swap" rel="stylesheet">
     <!--font-family: 'Jomolhari', serif;-->
     <!--CSS Link-->
+
+    <link rel="stylesheet" href="./css/jquery.fancybox.css">
 
     <!--All CSS librarires-->
     <link rel="stylesheet" href="css/libs.min.css">
@@ -164,115 +166,127 @@
                     <div class="breadcrumbs__inner ">
                         <ul class="braedcrumbs__list">
                             <li><a href="#">HOME</a></li>
-                            <li><span>SEARCH RESULTS</span></li>
+                            <li><a href="#">MEN</a></li>
+                            <li><a href="#">SHOES</a></li>
+                            <li><span>JACKETS</span></li>
                         </ul>
                     </div>
                 </div>
             </section>
             <!--BREADCRUMBS-->
-            <!--SEARCH RESULTS-->
-            <section class="search__results">
+            <!--ITEM DETAILS-->
+            <section class="item__details">
                 <div class="container">
-                    <h4 class="search-results__title middle__size-title">Search results for: <span>Jacket</span></h4>
-                    <p class="search-results__subtitle middle__size-subtitle">4 Items</p>
-                    <div class="search__items items__inner inner">
-                        <div class="item__inner">
-                            <a href="#">
-                                <img src="./images/item-image.jpg" alt="Item">
-                                <div class="item__name">Double-Layered Top</div>
-                                <div class="item__price">$89,99</div>
-                            </a>
+                    <div class="item__details-inner">
+                        <div class="slider-inner">
+                            <img id="mainImage" class="main__image" src="./images/item-detail-image.jpg" />
+                            <div id="nav__bar" class="nav-img__inner">
+                                <img class="imgStyle" src="./images/item-detail-image.jpg" />
+                                <img class="imgStyle" src="./images/item-detail-image-1.jpg" />
+                                <img class="imgStyle" src="./images/item-detail-image.jpg" />
+                            </div>
                         </div>
-                        <div class="item__inner">
-                            <a href="#">
-                                <img src="./images/item-image.jpg" alt="Item">
-                                <div class="item__name">Double-Layered Top</div>
-                                <div class="item__price">$89,99</div>
-                            </a>
+                        <div class="item-details-page__title--inner">
+                            <h4 class="item-details-page__title middle__size-title">FLORAL PRIMSOL</h4>
+                            <span>Article number: 14210160762</span>
+                            <p class="item-details-page__subtitle middle__size-subtitle">$99,95</p>
+                            <p class="common__text-opt">Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse
+                                a
+                                pellentesque dui, non felis.
+                                Maecenas malesuada elit lectus felis, malesuada ultricies.</p>
                         </div>
-                        <div class="item__inner">
-                            <a href="#">
-                                <img src="./images/item-image.jpg" alt="Item">
-                                <div class="item__name">Double-Layered Top</div>
-                                <div class="item__price">$89,99</div>
-                            </a>
+                        <div class="product-content-form-size">
+                            <p>SIZE</p>
+                            <div class="form_radio_btn">
+                                <input id="radio-1" type="radio" name="radio" value="1" checked>
+                                <label for="radio-1">38</label>
+                            </div>
+                            <div class="form_radio_btn">
+                                <input id="radio-2" type="radio" name="radio" value="2">
+                                <label for="radio-2">39</label>
+                            </div>
+                            <div class="form_radio_btn">
+                                <input id="radio-3" type="radio" name="radio" value="3">
+                                <label for="radio-3">40</label>
+                            </div>
+                            <div class="form_radio_btn">
+                                <input id="radio-4" type="radio" name="radio" value="4">
+                                <label for="radio-4">41</label>
+                            </div>
+                            <div class="form_radio_btn">
+                                <input id="radio-5" type="radio" name="radio" value="5">
+                                <label for="radio-5">42</label>
+                            </div>
                         </div>
-                        <div class="item__inner">
-                            <a href="#">
-                                <img src="./images/item-image.jpg" alt="Item">
-                                <div class="item__name">Double-Layered Top</div>
-                                <div class="item__price">$89,99</div>
-                            </a>
-                        </div>
+                        <button class="item-details-bottom__button">ADD TO CART</button>
                     </div>
                 </div>
+            </section>
+            <!--ITEM DETAILS-->
+            <!--CAROUSEL-->
+            <section class="carousel">
+                <div class="container">
+                    <h5 class="carousel__title-inner">Check out our lookbook</h5><!-- Optional(not for all pages!) -->
+                    <div class="carousel__inner">
+                        <div class="carousel__item carousel__item-1"><img
+                                src="images/ProfilePic_BlackSubmark-03_100x100.png" alt=""></div>
+                        <div class="carousel__item carousel__item-2"><img
+                                src="images/ProfilePic_BlackSubmark-03_100x100.png" alt=""></div>
+                        <div class="carousel__item carousel__item-3"><img
+                                src="images/ProfilePic_BlackSubmark-03_100x100.png" alt=""></div>
+                        <div class="carousel__item carousel__item-4"><img
+                                src="images/ProfilePic_BlackSubmark-03_100x100.png" alt=""></div>
+                        <div class="carousel__item carousel__item-5"><img
+                                src="images/ProfilePic_BlackSubmark-03_100x100.png" alt=""></div>
+                        <div class="carousel__item carousel__item-6"><img
+                                src="images/ProfilePic_BlackSubmark-03_100x100.png" alt=""></div>
+                        <div class="carousel__item carousel__item-7"><img
+                                src="images/ProfilePic_BlackSubmark-03_100x100.png" alt=""></div>
+                    </div>
+                </div>
+            </section>
+            <!--CAROUSEL-->
         </div>
-        </section>
-        <!--SEARCH RESULTS-->
-        <!--CAROUSEL-->
-        <section class="carousel">
+        <!-- FOOTER -->
+        <footer class="footer">
             <div class="container">
-                <h5 class="carousel__title-inner">Check out our lookbook</h5><!-- Optional(not for all pages!) -->
-                <div class="carousel__inner">
-                    <div class="carousel__item carousel__item-1"><img
-                            src="images/ProfilePic_BlackSubmark-03_100x100.png" alt=""></div>
-                    <div class="carousel__item carousel__item-2"><img
-                            src="images/ProfilePic_BlackSubmark-03_100x100.png" alt=""></div>
-                    <div class="carousel__item carousel__item-3"><img
-                            src="images/ProfilePic_BlackSubmark-03_100x100.png" alt=""></div>
-                    <div class="carousel__item carousel__item-4"><img
-                            src="images/ProfilePic_BlackSubmark-03_100x100.png" alt=""></div>
-                    <div class="carousel__item carousel__item-5"><img
-                            src="images/ProfilePic_BlackSubmark-03_100x100.png" alt=""></div>
-                    <div class="carousel__item carousel__item-6"><img
-                            src="images/ProfilePic_BlackSubmark-03_100x100.png" alt=""></div>
-                    <div class="carousel__item carousel__item-7"><img
-                            src="images/ProfilePic_BlackSubmark-03_100x100.png" alt=""></div>
+                <div class="footer__list list-colection">
+                    <ul>
+                        <span>COLECTION</span>
+                        <li><a href="woman_all-category.html">Woman (1725)</a></li>
+                        <li><a href="men-all-category.html">Men (635)</a></li>
+                        <li><a href="kids_all-category.html">Kids (2514)</a></li>
+                        <li><a href="#">Comming Soon (76)</a></li>
+                    </ul>
+                </div>
+                <div class="footer__list list-site">
+                    <ul>
+                        <span>SITE</span>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Copyright Policy</a></li>
+                        <li><a href="#">Press Kit</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer__list list-shop">
+                    <ul>
+                        <span>SHOP</span>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="#">Shipping Metods</a></li>
+                        <li><a href="#">Creer</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__list list-social">
+                    <span>SOCIAL</span>
+                    <p>Shoper is made with love in Warsaw, 2014 © All rights reserved. El passion</p>
+                    <a class="social-link twitter-icon" href="https://twitter.com/?lang=pt_pt"></a>
+                    <a class="social-link facebook-icon" href="https://www.facebook.com/?ref=logo"></a>
+                    <a class="social-link instagram-icon" href="https://www.instagram.com/"></a>
                 </div>
             </div>
-        </section>
-        <!--CAROUSEL-->
-    </div>
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__list list-colection">
-                <ul>
-                    <span>COLECTION</span>
-                    <li><a href="woman_all-category.html">Woman (1725)</a></li>
-                    <li><a href="men-all-category.html">Men (635)</a></li>
-                    <li><a href="kids_all-category.html">Kids (2514)</a></li>
-                    <li><a href="#">Comming Soon (76)</a></li>
-                </ul>
-            </div>
-            <div class="footer__list list-site">
-                <ul>
-                    <span>SITE</span>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Copyright Policy</a></li>
-                    <li><a href="#">Press Kit</a></li>
-                    <li><a href="#">Support</a></li>
-                </ul>
-            </div>
-            <div class="footer__list list-shop">
-                <ul>
-                    <span>SHOP</span>
-                    <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="#">Shipping Metods</a></li>
-                    <li><a href="#">Creer</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer__list list-social">
-                <span>SOCIAL</span>
-                <p>Shoper is made with love in Warsaw, 2014 © All rights reserved. El passion</p>
-                <a class="social-link twitter-icon" href="https://twitter.com/?lang=pt_pt"></a>
-                <a class="social-link facebook-icon" href="https://www.facebook.com/?ref=logo"></a>
-                <a class="social-link instagram-icon" href="https://www.instagram.com/"></a>
-            </div>
-        </div>
-    </footer>
+        </footer>
     </div>
     <!-- FOOTER -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

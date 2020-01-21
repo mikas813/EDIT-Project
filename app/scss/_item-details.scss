@@ -1,0 +1,81 @@
+.item__details-inner{
+    padding-bottom: 75px;
+    text-align: center;
+    .slider-inner{
+        position: relative;
+        max-width: 1180px;
+        height: auto;
+        .main__image{
+            width: 100%;
+            height: auto;
+            border: 1.5px solid $border-color;
+        }
+        .nav-img__inner{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            .imgStyle {
+                width: 150px;
+                height: 100px;
+                display: block;
+                border: 2px solid $border-color;
+                margin: 0px 10px 10px 0px;
+                @media (max-width: 720px) {
+                    width: 70px;
+                    height: 50px;
+                }
+                @media (max-width: 420px) {
+                    width: 40px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+    span{ /*Text below title "article number"*/
+        font-family: 'Georgia';
+        font-style: italic;
+        color: #a3a3a3;
+        line-height: 36px;
+    }
+    .common__text-opt{  /*Text below price*/
+        max-width: 620px;
+        margin: 0 auto;
+    }
+    .product-content-form-size{ /*Size retengular buttons*/
+        padding: 35px 0 50px;
+        color: #464542;
+        p{  /*Text above buttons "SIZE"*/
+            margin-bottom: 24px;
+        }
+        .form_radio_btn {
+            margin-right: 10px;
+            display: inline-block;
+        }
+        .form_radio_btn input[type=radio] {
+            display: none;
+        }
+        .form_radio_btn label {
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid #cacaca;
+            user-select: none;
+            display: inline-block;
+            @media (max-width: 720px) {
+                padding: 5px;
+                font-size: 14px;
+            }
+        }
+        /* Checked */
+        .form_radio_btn input[type=radio]:checked + label {
+            color: #fff;
+            background: $btn-color;
+        }
+    }
+    button{  /*Add to cart button*/
+        padding: 20px 65px;
+        @media (max-width: 720px) {
+           padding: 10px 40px;
+           font-size: 14px;
+        }
+    }
+}
