@@ -19,12 +19,14 @@ gulp.task('sass', function () {
         .pipe(browserSync.reload({ stream: true })) //task 'browserSync' refreshes page if occour any change!
 });
 
+
 gulp.task('script', function () {
     return gulp.src([
         'node_modules/slick-carousel/slick/slick.js',
         'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
-        'node_modules/mixitup/dist/mixitup.js',
+        'node_modules/selectric/src/jquery.selectric.js',
         'node_modules/jquery.jold.paginator/jquery.jold.paginator.js'
+
     ])
         .pipe(concat('libs.min.js')) //unites all files 'js' to unic file 'libs.min.js'!
         .pipe(uglify()) //minimazes all js libs!
@@ -36,7 +38,9 @@ gulp.task('style', function () {
     return gulp.src([
         'node_modules/magnific-popup/dist/magnific-popup.css',
         'node_modules/normalize.css/normalize.css',
-        'node_modules/slick-carousel/slick/slick.css'
+        'node_modules/slick-carousel/slick/slick.css',
+        'node_modules/selectric/src/selectric.css',
+        'node_modules/animate.css/animate.css'
     ])
         .pipe(concat('libs.min.css')) //unites all files 'css' to unic file 'libs.css'!
         .pipe(cssmin()) //minimazes all css libs!

@@ -86,6 +86,8 @@
         .grid__item-1{
             height: $tall_box-height;
             background-color: $grid_item_1-col;
+            animation-delay: .3s;
+
             @media (max-width: 770px){
                 height: 500px;
             }
@@ -95,31 +97,40 @@
         }    
         .grid__item-2{
             background-color: $grid_item_2-col;
+            animation-delay: 1.8s;
         }
         .grid__item-3{
             background-color: $grid_item_3-col;
+            animation-delay: .8s;
         }
         .grid__item-4{
             background-color: $grid_item_4-col;
+            animation-delay: 2.2s;
         }
         .grid__item-5{
             background-color: $grid_item_5-col;
+            animation-delay: 1.3s;
         }
         .grid__item-6{
             background-color: $grid_item_6-col;
+            animation-delay: 1.2s;
         }
         .grid__item-7{
             background-color: $grid_item_7-col;
+            animation-delay: 2.3s;
         }
         .grid__item-8{
             background-color: $grid_item_8-col;
+            animation-delay: .8s;
         }
         .grid__item-9{
             background-color: $grid_item_9-col;
+            animation-delay: 1.8s;
         }
         .grid__item-10{
             height: $tall_box-height;
             background-color: $grid_item_10-col;
+            animation-delay: .3s;
             @media (max-width: 770px){
                 height: 500px;
             }

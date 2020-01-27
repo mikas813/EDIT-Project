@@ -10,32 +10,44 @@
     @media (max-width: 590px) {
         padding: 30px 0px 50px;
     }
-    select{
-        appearance: none;
+    .select__items-inner{
+        border: 1px solid $border-color; 
+        padding-left: 10px;
         max-width: 580px;
         width: 100%;
-        background: none;
-        border: 1px solid $border-color;
-        padding: 10px;
-        border-radius: 0;
-        font-size: 1rem;   
-        color: inherit;
-        position: relative;  
-        margin-bottom: 45px;
-        display: block;
+        text-transform: uppercase;
+        position: relative;
         &:after {
-            content: "▼";
-            padding: 12px 8px;
+            content: "";
+            background-image: url(../images/icons/select-triangle.png);
             position: absolute;
-            right: 10px;
-            top: 0;
-            z-index: 1;
-            text-align: center;
-            width: 10%;
-            height: 100%;
+            width: 11px;
+            height: 6px;
+            right: 13px;
+            top: 17px;
             pointer-events: none;
         }
+        .select__option-inner{
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            width: 100%;
+            top: 37px;
+            left: 0;
+            padding-left: 10px;
+            border: 1px solid $border-color;  
+            border-top: unset;
+            @include main-box-shadow;
+            .select__option{
+                cursor: pointer;
+            }
+        }
     }
+    .rotatetriangle{
+        &::after{
+        transform: rotate(180deg);
+    }
+}
     .email-user-name-input__inner{
         display: flex;
         justify-content: space-between;
@@ -60,7 +72,6 @@
         max-width: 580px;
         width: 100%;
         height: 200px;
-        border-color: #c2c2c2;
         resize: none;
         margin-bottom: 45px;        
         border: 1px solid $border-color;

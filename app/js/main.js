@@ -1,4 +1,5 @@
-$(function(){//top slider options
+//SLIDER Main page
+  $(function(){//top slider options
     $('.slider__inner').slick({
         arrows: false,
         dots: false,
@@ -9,8 +10,9 @@ $(function(){//top slider options
     });
     
   
-}); 
-$(function(){//slider bottom options 
+  });
+  //Main page
+  $(function(){//slider bottom options 
     $('.carousel__inner').slick({
         slidesToShow: 5,
         slidesToScroll: 1,
@@ -70,6 +72,9 @@ $(function(){//slider bottom options
     $( ".mobile__menu" ).click(function() {
       $(".navigation").toggle(); //change display none to display block by clicking on burger menu and shows responsive site navigation!
   });
+    $( "#removeItem" ).click(function(remIt) {
+      $(this).parent().toggle(500); //on click remove item from cart
+  });
 
   $('.mobile__menu').on('click', function(){
     $('.menu__row').toggleClass('active');//by clicking add a 'class' to midle burger row to change its options to display none on click!
@@ -84,21 +89,24 @@ $(function(){//slider bottom options
 
     });
   });
-  /*Item description page slider*/
-$(document).ready(function () {
+
+  /*Item description's page slider*/
+  $(document).ready(function () {
   $('#nav__bar img').on({
     click: function () {
       var imageURL = $(this).attr('src');
-      $('#mainImage').fadeOut(1000, function () {
+      $('#mainImage').fadeOut(500, function () {
         $(this).attr('src', imageURL);
-      }).fadeIn(1000);
+      }).fadeIn(500);
     }
   });
-});
+  });
+  /*Item description's page slider*/
+//SLIDER
 
-//pagination men all products page
+//PAGINATION men all products page
 var paginator = new $('.items-container').joldPaginator({
-  'perPage': 12,
+  'perPage': 8,
   'items': '.item',
   'paginator': '.pagination-container',
   'indicator': {
@@ -106,20 +114,53 @@ var paginator = new $('.items-container').joldPaginator({
     'text': 'Showing item {start}-{end} of {total}',
   }
 });
-//custom select! men all products page
+//PAGINATION
+
+//CUSTOM SELECT men all products page!
 $('.select__items-inner').on('click', function () {
-  // $('.select__option-inner').slideUp();
-  $(this).toggleClass('rotatetriangle');
+  $('.select__option-inner').slideUp();
   $(this).find('.select__option-inner').slideToggle(400);
+  $(this).toggleClass('rotatetriangle');//toggle class and rotate triangle on 180 deg!
 });
-$(document).mouseup(function (e) { // событие клика по веб-документу
-  var div = $(".select__option-inner"); // тут указываем ID элемента
-  if (!div.is(e.target) // если клик был не по нашему блоку
-    && div.has(e.target).length === 0) { // и не по его дочерним элементам
-    div.slideUp(); // скрываем его
-    $('.select__items-inner').removeClass('rotatetriangle');
+
+//By clickin outside of element hide all opened select elements!
+ $(document).mouseup(function (e) { //  action by click on document
+   var div = $(".select__option-inner"); //varible with element
+   if (!div.is(e.target) // if clicked outside of element
+     && div.has(e.target).length === 0) { // or clicked outside of children element 
+     div.slideUp(); //element hides
+     $('.select__items-inner').removeClass('rotatetriangle'); //remove class and rotate triangle on 180 deg!
+   }
+ });
+
+
+$(function () {
+  $('select').selectric();
+});
+
+$('#hidePayment').on('click', function () {
+  $('.checkout__inner').slideToggle();
+  $(this).closest('.basket_bottom-buttons').slideUp(800);
+  $(this).addClass('flipOutX');
+});
+
+//item description button add to cart animation!
+$('.item-details-bottom__button').on('click', function () {
+  $(this).addClass('bounceOutUp');
+});
+
+
+var mixer = mixitup('.containerr');
+var mixer = mixitup(containerEl);
+var mixer = mixitup(containerEl, {
+  selectors: {
+    target: '.blog-item'
+  },
+  animation: {
+    duration: 300
   }
 });
+
 
 
 
