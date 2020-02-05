@@ -25,7 +25,9 @@ gulp.task('script', function () {
         'node_modules/slick-carousel/slick/slick.js',
         'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
         'node_modules/selectric/src/jquery.selectric.js',
-        'node_modules/jquery.jold.paginator/jquery.jold.paginator.js'
+        'node_modules/jquery.jold.paginator/jquery.jold.paginator.js',
+        'node_modules/wowjs/dist/wow.js',
+        'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js'
 
     ])
         .pipe(concat('libs.min.js')) //unites all files 'js' to unic file 'libs.min.js'!
@@ -40,7 +42,8 @@ gulp.task('style', function () {
         'node_modules/normalize.css/normalize.css',
         'node_modules/slick-carousel/slick/slick.css',
         'node_modules/selectric/src/selectric.css',
-        'node_modules/animate.css/animate.css'
+        'node_modules/animate.css/animate.css',
+        'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css'
     ])
         .pipe(concat('libs.min.css')) //unites all files 'css' to unic file 'libs.css'!
         .pipe(cssmin()) //minimazes all css libs!

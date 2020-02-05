@@ -37,7 +37,6 @@
     <link rel="shortcut icon" href="/images/system/favicon.ico" />
     <link rel="icon" type="image/ico" href="/images/system/favicon.ico" />
     <!--Font's name (icomoon)-->
-    <link rel="stylesheet" href="css/style.css">
 
     <!--Font's name ( 'Lato', sans-serif )-->
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
@@ -177,21 +176,21 @@
                     <div class="filter__form-inner">
                         <form action="#">
                             <select name="price" id="">
-                                <option value="">$20-$40</option>
-                                <option value="">$40-$60</option>
-                                <option value="">$60-$80</option>
-                                <option value="">$80-$100</option>
+                                <option data-search data-price="$20-$40" value="">$20-$40</option>
+                                <option data-search data-price="$40-$60" value="">$40-$60</option>
+                                <option data-search data-price="$60-$80" value="">$60-$80</option>
+                                <option data-search data-price="$80-100" value="">$80-$100</option>
                             </select>
-                            <select name="size" id="">
-                                <option value="">S</option>
-                                <option value="">M</option>
-                                <option value="">L</option>
-                                <option value="">XL</option>
+                            <select >
+                                <option data-search data-size="s" value="">S</option>
+                                <option data-search data-size="m" value="">M</option>
+                                <option data-search data-size="l" value="">L</option>
+                                <option data-search data-size="xl" value="">XL</option>
                             </select>
-                            <select name="color" id="">
-                                <option value="">Black</option>
-                                <option value="">White</option>
-                                <option value="">Red</option>
+                            <select>
+                                <option data-search data-color="black" value="">Black</option>
+                                <option data-search data-color="white" value="">White</option>
+                                <option data-search data-color="red" value="">Red</option>
                             </select>
                         </form>
                     </div>
@@ -203,28 +202,28 @@
                 <!-- Class items container is used fot pagination plugin -->
                 <div class="search__items items__inner inner items-container">
                     <!-- Class 'item' 'item-visible' container is used fot pagination plugin -->
-                    <div class="category-item 20-40 item__inner item item-visible">
+                    <div data-item  class="category-item 20-40 item__inner item item-visible">
                         <a href="item-details.html">
                             <img src="./images/item-image.jpg" alt="Item">
                             <div class="item__name">Double-Layered Top</div>
                             <div class="item__price">$29,99</div>
                         </a>
                     </div>
-                    <div class="category-item 20-40 item__inner item item-visible">
+                    <div data-item  class="category-item 20-40 item__inner item item-visible">
                         <a href="item-details.html">
                             <img src="./images/item-image.jpg" alt="Item">
                             <div class="item__name">Double-Layered Top</div>
                             <div class="item__price">$29,99</div>
                         </a>
                     </div>
-                    <div class="category-item 20-40 item__inner item item-visible">
+                    <div data-item  class="category-item 20-40 item__inner item item-visible">
                         <a href="item-details.html">
                             <img src="./images/item-image.jpg" alt="Item">
                             <div class="item__name">Double-Layered Top</div>
                             <div class="item__price">$29,99</div>
                         </a>
                     </div>
-                    <div class="category-item 20-40 item__inner item item-visible">
+                    <div data-item  class="category-item 20-40 item__inner item item-visible">
                         <a href="item-details.html">
                             <img src="./images/item-image.jpg" alt="Item">
                             <div class="item__name">Double-Layered Top</div>
@@ -593,7 +592,7 @@
                 <div class="footer__list list-shop">
                     <ul>
                         <span>SHOP</span>
-                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="about.html">About Us</a></li>
                         <li><a href="#">Shipping Metods</a></li>
                         <li><a href="#">Creer</a></li>
                         <li><a href="contact.html">Contact</a></li>

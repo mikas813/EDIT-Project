@@ -15,28 +15,17 @@
             $link-color: #e67429;
         //==/font colors
 
-        /*
-        font-size in px
-        14px=0.875em
-        16px=1em
-        18px=1.125em
-        24px=1.5em
-        32px=2em
-        36px=2.25em
-        52px=3.25em
-        72px=4.5em
-        */
       
         //==font sizes
             
-            $main_font-size: 1em;
-            $header-footer_font-size: 0.875em;
+            $main_font-size: 16px;
+            $header-footer_font-size: 14px;
              
-            $S-title_font-size: 1.125em;
-            $M-title_font-size: 1.5em;
-            $L-title_font-size: 2.25em;
-            $XL-title_font-size: 3.25em;
-            $XXL-title_font-size: 4.5em;
+            $S-title_font-size: 18px;
+            $M-title_font-size: 24px;
+            $L-title_font-size: 36px;
+            $XL-title_font-size: 52px;
+            $XXL-title_font-size: 72px;
         //==/font sizes
     //==font
 

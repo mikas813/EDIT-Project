@@ -222,6 +222,16 @@
                         font-size: 15px;
                     }
                 }
+                .login{
+                    padding: 10px 20px;
+                    display: none;
+                    background-color: $btn_color;
+                    color: #fff;
+                }
+                .login__modal{
+                    display: none;
+                    background-color: #000;
+                }
                 .header__basket-inner{
                     position: relative;
                     min-width: 190px;
