@@ -1,4 +1,4 @@
-//SLIDER Main page
+//SLIDER Main page slider with title!
   $(function(){//top slider options
     $('.slider__inner').slick({
         arrows: false,
@@ -8,11 +8,11 @@
         autoplaySpeed: 4000,
 
     });
-    
-  
   });
-  //Main page
-  $(function(){//slider bottom options 
+  //SLIDER Main page slider with title!
+
+  //Main page bottom slider whit items!
+  $(function(){
     $('.carousel__inner').slick({
         slidesToShow: 5,
         slidesToScroll: 1,
@@ -68,43 +68,60 @@
            
           ]
       });
+  //Main page bottom slider whit items!
 
+  //On click by burger menu shows navigation! MAX-WITH 1200px
     $( ".mobile__menu" ).click(function() {
-      $(".navigation").toggle(); //change display none to display block by clicking on burger menu and shows responsive site navigation!
+      $(".navigation").toggle(); 
   });
-    $( "#removeItem" ).click(function(remIt) {
-      $(this).parent().toggle(500); //on click remove item from cart
+  //On click by burger menu shows navigation! MAX-WITH 1200px
+
+//Login button
+  $('.logout').on('click', function () {
+    $('.header__login-inner').toggle();
+    $('.login').toggle();
   });
 
+    $('[data-fancybox="gallery"]').fancybox({
+      // Options will go here
+    });
+//Login button
+
+
+  //By clicking on burger menu add a 'class' to midle burger row to change its options to display none!
   $('.mobile__menu').on('click', function(){
-    $('.menu__row').toggleClass('active');//by clicking add a 'class' to midle burger row to change its options to display none on click!
+    $('.menu__row').toggleClass('active');
   });
-    //header search button
+  //By clicking on burger menu add a 'class' to midle burger row to change its options to display none!
+
+  //On click on search icon opens texarera!
     $('.header__search-btn-img').on('click', function(){
       $('.search-area').toggleClass('text__area');
     });
+  //On click on search icon opens texarera!
 
+  //by clicking add a 'class' to header search button and change for this class margin left to 140px!
     $('.header__search-btn-img').on('click', function(){
-      $('.header__search-btn-img').toggleClass('active');//by clicking add a 'class' to header search button and change for this class margin left to 140px!
-
+      $('.header__search-btn-img').toggleClass('active');
     });
   });
+  //by clicking add a 'class' to header search button and change for this class margin left to 140px!
 
-  /*Item description's page slider*/
+
+  /*Description's page item slider*/
   $(document).ready(function () {
-  $('#nav__bar img').on({
-    click: function () {
-      var imageURL = $(this).attr('src');
-      $('#mainImage').fadeOut(500, function () {
-        $(this).attr('src', imageURL);
-      }).fadeIn(500);
-    }
+    $('#nav__bar img').on({
+      click: function () {
+        var imageURL = $(this).attr('src');
+        $('#mainImage').fadeOut(500, function () {
+          $(this).attr('src', imageURL);
+        }).fadeIn(500);
+      }
+    });
   });
-  });
-  /*Item description's page slider*/
-//SLIDER
+  /*Description's page item slider*/
 
-//PAGINATION men all products page
+//Pagination men all products page!
 var paginator = new $('.items-container').joldPaginator({
   'perPage': 8,
   'items': '.item',
@@ -114,66 +131,45 @@ var paginator = new $('.items-container').joldPaginator({
     'text': 'Showing item {start}-{end} of {total}',
   }
 });
-//PAGINATION
+//Pagination men all products page!
 
-//CUSTOM SELECT men all products page!
-$('.select__items-inner').on('click', function () {
-  $('.select__option-inner').slideUp();
-  $(this).find('.select__option-inner').slideToggle(400);
-  $(this).toggleClass('rotatetriangle');//toggle class and rotate triangle on 180 deg!
-});
-
-//By clickin outside of element hide all opened select elements!
- $(document).mouseup(function (e) { //  action by click on document
-   var div = $(".select__option-inner"); //varible with element
-   if (!div.is(e.target) // if clicked outside of element
-     && div.has(e.target).length === 0) { // or clicked outside of children element 
-     div.slideUp(); //element hides
-     $('.select__items-inner').removeClass('rotatetriangle'); //remove class and rotate triangle on 180 deg!
-   }
- });
-
-
+//Custom select plugin!
 $(function () {
   $('select').selectric();
 });
+//Custom select plugin!
 
+//Animation on shoping page by clicing hide button and shows shiping and payment forms!
 $('#hidePayment').on('click', function () {
   $('.checkout__inner').slideToggle();
   $(this).closest('.basket_bottom-buttons').slideUp(800);
   $(this).addClass('flipOutX');
 });
+//Animation on shoping page by clicing hide button and shows shiping and payment forms!
 
-//item description button add to cart animation!
+//Animation on item page, by clickin on button bounce up button!
 $('.item-details-bottom__button').on('click', function () {
   $(this).addClass('bounceOutUp');
 });
+//Animation on item page, by clickin on button bounce up button!
 
 
-var mixer = mixitup('.containerr');
-var mixer = mixitup(containerEl);
-var mixer = mixitup(containerEl, {
-  selectors: {
-    target: '.blog-item'
-  },
-  animation: {
-    duration: 300
-  }
+//Items filter
+$(function () {
+  let selectVal = $('.selectric-scroll li').text();
+
+  $('.selectric-scroll li').on('click', function () {
+    $('.item__inner').hide();
+
+    console.log(selectVal);
+  
+        // filterItems = $('[data-item]');
+
+      // filterItems.addClass('hidden');
+      // $('[data-filter-item][data-filter-name*="' + searchVal + '"]').removeClass('hidden');
+      // filterItems.removeClass('hidden');
+  });
 });
+//Items filter
 
-
-
-
-
-// $('.20-40').click(function () {
-//   $("[class*=item__inner]").hide();
-//   $("[class*=20-40]").show();
-// });
-// $('.40-60').click(function () {
-//   $("[class*=item__inner]").hide();
-//   $("[class*=40-60]").show();
-// });
-// $('.60-80').click(function () {
-//   $("[class*=item__inner]").hide();
-//   $("[class*=60-80]").show();
-// });
+new WOW().init();

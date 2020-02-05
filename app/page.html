@@ -37,7 +37,6 @@
 	<link rel="shortcut icon" href="/images/system/favicon.ico" />
 	<link rel="icon" type="image/ico" href="/images/system/favicon.ico" />
 	<!--Font's name (icomoon)-->
-	<link rel="stylesheet" href="css/style.css">
 
 	<!--Font's name ( 'Lato', sans-serif )-->
 	<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
@@ -104,10 +103,27 @@
 												<a class="header__user-name" href="#">Hi, Michal</a>
 											</div>
 											<div class="bottom__content">
-												<button  class="header__main-btn">Logout</button>
+												<button class="logout">Logout</button>
 											</div>
 										</div>
 									</div>
+								</div>
+
+								<a data-fancybox data-src="#modal" href="javascript:;"
+									class="btn btn-primary login">Login</a>
+								<div class="login__modal" id="modal">
+									<div class="title">LOGIN</div>
+									<form action="#">
+										<label for="">
+											<input class="name" type="text" placeholder="Name" required>
+										</label>
+										<label for="">
+											<input class="password" type="password" placeholder="Password" required>
+										</label>
+										<button type="submit">Login</button>
+										<a href="#">Sign Up</a>
+										<a href="#">Forgot password?</a>
+									</form>
 								</div>
 								<div class="header__basket-inner">
 									<a class="header__basket" href="shoping-bag.html">Basket<span>(2)</span></a>
@@ -116,7 +132,8 @@
 											<div class="basket__items">
 												<div class="basket__item">
 													<div class="basket__item-left">
-														<img src="./images/hover-basket-item-image.jpg" alt="Basket Item">
+														<img src="./images/hover-basket-item-image.jpg"
+															alt="Basket Item">
 														<a href="#">Men Shoes 43</a>
 													</div>
 													<div class="basket__item-right">
@@ -126,7 +143,8 @@
 												</div>
 												<div class="basket__item">
 													<div class="basket__item-left">
-														<img src="./images/hover-basket-item-image.jpg" alt="Basket Item">
+														<img src="./images/hover-basket-item-image.jpg"
+															alt="Basket Item">
 														<a href="#">Men Shoes 43</a>
 													</div>
 													<div class="basket__item-right">
@@ -141,10 +159,9 @@
 												Subtotal:
 												<span class="item__price">$190,90</span>
 											</div>
-											<button  class="header__main-btn">CHECKOUT</button>
+											<a href="shoping-bag.html" class="header__main-btn">CHECKOUT</a>
 										</div>
 									</div>
-
 								</div>
 								<a class="header__search_btn" href="#">
 									<img class="header__search-btn-img"
