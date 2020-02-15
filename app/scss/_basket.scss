@@ -5,6 +5,9 @@
     color: $main_font-color;
     margin:  auto;
     max-width: 1244px;
+    @media (max-width: 640px) {
+        font-size: 14px;
+    }
     .top_info-text {
         max-width: 1180px;
         margin: 0 auto;
@@ -13,19 +16,43 @@
         padding: 0px 0 14px;
         .left_side {
             display: flex;
+            .name_description-inner{
+                margin-right: 10px;
+            }
             .name_product-inner{
                 margin-right: 50px;
+                @media (max-width: 390px) {
+                    margin-right: 30px;
+                }
             }
         }
         .right_side {
             display: flex;
             .name_color-inner{
                 min-width: 180px;
+                @media (max-width: 810px) {
+                    min-width: 60px;
+                    margin-right: 10px;
+                }
+                @media (max-width: 640px) {
+                    display: none;
+                }
             }
             .name_size-inner,
             .name_qty-inner,
             .name_amount-inner{
                 min-width: 100px;
+            }
+            .name_size-inner,
+            .name_qty-inner{
+                @media (max-width: 640px) {
+                    display: none;
+                }
+            }
+            .name_amount-inner{
+                @media (max-width: 640px) {
+                    min-width: 60px;
+                }
             }
         }
     }
@@ -45,11 +72,22 @@
                 display: flex;
                 .item_info-img {
                     min-width: 125px;
+                    @media (max-width: 390px) {
+                        min-width: 110px;
+                    }
                 }
                 .item_detail_name-id {
                     display: flex;
                     align-items: center;
                     min-width: 240px;
+                    @media (max-width: 910px){
+                        flex-wrap: wrap;
+                        margin-right: 10px;
+                        min-width: 110px;
+                    }
+                }
+                @media (max-width: 640px) {
+                    padding: 5px 0px 5px;
                 }
             }
             .right_side {
@@ -59,6 +97,13 @@
                     min-width: 180px;
                     display: flex;
                     align-items: center;
+                    @media (max-width: 810px){
+                        min-width: 60px;
+                        margin-right: 10px;
+                    }
+                    @media (max-width: 640px){
+                        display: none;
+                    }
                 }
                 .info_size,
                 .info_qty,
@@ -67,6 +112,18 @@
                     display: flex;
                     align-items: center;
                 }
+                .info_size,
+                .info_qty{
+                    @media (max-width: 640px) {
+                        display: none;
+                    }
+                }
+                .info_price{
+                    @media (max-width: 640px) {
+                        min-width: 60px;
+                    }
+                }
+
             }
         }
         .basket_bottom-buttons{
@@ -84,6 +141,9 @@
                 background-color: #f68236;
                 color: #fff;
                 padding: 20px 50px;
+                @media (max-width: 640px) {
+                    padding: 15px 35px;
+                }
             }
             
         }
@@ -131,6 +191,10 @@
         background-color: #fefefe;
         border: 1px solid #e5e5e5;
         padding-bottom: 85px;
+        @media (max-width: 640px) {
+            padding: 10px;
+            font-size: 14px;
+        }
     .select__inner{
         max-width: 580px;
         margin: 0 auto;
@@ -153,6 +217,7 @@
             .right{
                 width: 47%;
                 input{
+                    border: 1px solid $border-color;
                     width: 100%;
                     padding: 7px;
                 }
@@ -169,6 +234,7 @@
                 display: block;
             }
             input{
+                border: 1px solid $border-color;
                 padding: 7px;
                 width: 100%;
             }
@@ -217,10 +283,13 @@
             }
         }
         button{
-            width: 50%;
+            width: 55%;
             padding: 20px 50px;
             margin: 0 auto;
-            left: 100px;
+            display: block;
+            @media (max-width: 640px) {
+                padding: 15px 25px;
+            }
         }
     }
 }

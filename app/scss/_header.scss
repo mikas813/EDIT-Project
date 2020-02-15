@@ -231,6 +231,11 @@
                 .login__modal{
                     display: none;
                     background-color: #000;
+                    .login__input-inner{
+                        input{
+                            padding: 10px;
+                        }
+                    }
                 }
                 .header__basket-inner{
                     position: relative;
