@@ -65,7 +65,7 @@
             justify-content: space-between;
             display: flex;
             &:hover{
-                background-color: #f9f9f9;
+                background-color: $grey;
             }
             .left_side {
                 padding: 19px 0 19px;
@@ -137,9 +137,9 @@
                 text-decoration: underline;
             }
             button{
-                border: 1px solid #e67429;
-                background-color: #f68236;
-                color: #fff;
+                border: 1px solid $btn_border-color;
+                background-color: $btn_color;
+                color: $container-color;
                 padding: 20px 50px;
                 @media (max-width: 640px) {
                     padding: 15px 35px;
@@ -150,7 +150,7 @@
         .detail_total{
             border-top: 1px solid $border-color;
             padding: 20px 0;
-            background-color: #f9f9f9;
+            background-color: $grey;
             align-items: center;
             display: flex;
             margin: 0 auto;
@@ -158,7 +158,7 @@
             justify-content: flex-end;
             .subtotal_price{
                 margin-right: 40px;
-                color: #f68236;
+                color: $btn_color;
             }
             .subtotal_label{
                 margin-right: 30px;
@@ -176,7 +176,7 @@
         .angle__border{
             width: 25px;
             height: 2px;
-            background-color: #f68236;
+            background-color: $btn_color;
             &:nth-child(odd){
                 transform: rotate(45deg);
                 margin-right: -8px;
@@ -188,8 +188,8 @@
         }
     }
     .checkout__content{
-        background-color: #fefefe;
-        border: 1px solid #e5e5e5;
+        background-color: $secondary-grey;
+        border: 1px solid $border-color;
         padding-bottom: 85px;
         @media (max-width: 640px) {
             padding: 10px;
@@ -200,13 +200,13 @@
         margin: 0 auto;
         color: $secondary-font-color;
         .selectric-items{
-            background-color: #fff;
+            background-color: $container-color;
         }
         .selectric{
             margin: 15px 0 50px;
-            background-color: #fff;
+            background-color: $container-color;
             .button{
-                background-color: #fff;
+                background-color: $container-color;
             }
         }
         .duble-input{
@@ -264,13 +264,13 @@
             font-style: italic;
         }
         .total{
-            color: #f68236;
+            color: $btn_color;
         }
     }
     .payment{
         .label,
         .selectric-items li.highlighted{
-            background-color: #fff;
+            background-color: $container-color;
             position: relative;
             &::before{
                 content: '';

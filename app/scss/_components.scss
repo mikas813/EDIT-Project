@@ -3,7 +3,7 @@
 .container{
     max-width: 1244px;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: $container-color;
     font-family: $main_font;
     padding: 0px 22px;
     .inner{

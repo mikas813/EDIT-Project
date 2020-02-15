@@ -13,7 +13,7 @@
         .selectric{
             background-color: #fff;
             border: none;
-            border-bottom: 1px solid #000;
+            border-bottom: 1px solid $black;
         }
         .button{
             background-color: #fff;
@@ -29,7 +29,7 @@
     }
     .pagination__item{
         padding: 6px 10px;
-        border: 1px solid #000;
+        border: 1px solid $black;
         & + .pagination__item{
             margin-left: 10px;
         }
