@@ -61,27 +61,22 @@
             }
             .menu__row{
                 height: 5px;
-                background-color: #000;
+                background-color: $black;
                 position: relative;
                 transition: all .2s;
                 width: 40px;
-                &::before{
+                &::before,
+                &::after{
                     height: 5px;
                     width: 40px;
                     position: absolute;
-                    background-color: #000;
+                    background-color: $black;
                     top: -12px;
                     transition: all .2s;
                     content: '';
                 }
                 &::after{
-                    height: 5px;
-                    width: 40px;
-                    transition: all .2s;
-                    position: absolute;
-                    background-color: #000;
                     top: 12px;
-                    content: '';
                 }
                 @media (max-width: 460px) {
                     width: 35px;
@@ -93,25 +88,19 @@
             }
             .menu__row.active{ //This class make menu rows moving to become from burger to 'X'!
                 background: transparent;
-                &::before{
+                &::before,
+                &::after{
                     height: 5px;
                     width: 40px;
                     position: absolute;
-                    background-color: #000;
+                    background-color: $black;
                     top: 0px;
                     transform: rotate(-45deg);
                     transition: all .2s;
                     content: '';
                 }
                 &::after{
-                    height: 5px;
-                    width: 40px;
-                    position: absolute;
-                    background-color: #000;
-                    top: 0px;
                     transform: rotate(45deg);
-                    transition: all .2s;
-                    content: '';
                 }
             }
         }
@@ -208,7 +197,7 @@
                         }
                     }
                     .active{
-                        color: #f68236;
+                        color: $btn_color;
                     }
                     @media (max-width: 1200px){
                         width: 100%;
@@ -226,11 +215,11 @@
                     padding: 10px 20px;
                     display: none;
                     background-color: $btn_color;
-                    color: #fff;
+                    color: $container-color;
                 }
                 .login__modal{
                     display: none;
-                    background-color: #000;
+                    background-color: $black;
                     .login__input-inner{
                         input{
                             padding: 10px;
@@ -316,7 +305,7 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    border-bottom: 1px solid #e5e5e5;
+                    border-bottom: 1px solid $border-color;
                     padding: 20px 0px;
                     &-left{
                         align-items: center;
@@ -343,7 +332,7 @@
                             }
                         }                
                         button{
-                            color: #000;
+                            color: $black;
                             background: none;
                             border: none;
                             font-weight: 200;
@@ -364,14 +353,14 @@
                     align-items: center;
                     display: flex;
                     .item__price{
-                        color: #f68236;
+                        color: $btn_color;
                     }
                     @media (max-width: 390px) {
                         padding: 15px 10px;
                     }
                     a{  
                         background-color: $link-color;
-                        color: #fff;
+                        color: $container-color;
                         padding: 10px 15px;
                         @media (max-width: 460px) {
                             font-size: 10px;
