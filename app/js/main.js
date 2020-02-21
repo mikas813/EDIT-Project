@@ -207,7 +207,7 @@ $(document).ready(function () {
 
 // Validation basket!
 $(document).ready(function () {
-  let form = $('.checkout__content');
+  let form = $('form');
   let btn = form.find('.order-btn');
   form.find('.inp').addClass('empty-field');
 
@@ -256,7 +256,27 @@ $(document).ready(function () {
     }
   });
 });
-
 // Validation!
+
+let logoutBtn = $('.logout-btn');
+let loginBtn = $('.login-btn');
+let loginPopUp = $('.login-popup');
+let popUpCloseBtn = $('.login-popup h3 span');
+
+logoutBtn.on('click', function () {
+  $('.header__login-inner').toggle();
+  loginBtn.toggle()
+});
+loginBtn.on('click', function () {
+  loginPopUp.toggle();
+});
+popUpCloseBtn.on('click', function () {
+  loginPopUp.toggle();
+});
+$('.login').on('click', function () {
+  loginPopUp.toggle();
+
+});
+
 
 new WOW().init();
