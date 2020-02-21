@@ -74,15 +74,15 @@
 </script>
 
 <body>
-    <!--HEADER-->
     <div class="wrapper">
         <div class="content">
+            <!--HEADER-->
             <header class="header">
                 <div class="container">
                     <div class="header__inner">
                         <div class="header__content-left">
                             <a href="index.html">
-                                <img class="header__logo" src="images/site_logo.png" alt="SH">
+                                <img class="header__logo" src="images/site_logo.png" alt="Site's logo.">
                             </a>
                             <nav class="navigation">
                                 <a href="all-categories-women.html">Woman</a>
@@ -105,11 +105,13 @@
                                                 <a class="header__user-name" href="#">Hi, Michal</a>
                                             </div>
                                             <div class="bottom__content">
-                                                <button class="header__main-btn">Logout</button>
+                                                <button class="logout-btn header__main-btn">Logout</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <button class="login-btn">Login</button>
+                                <!--								<a href="#test-popup" data-effect="mfp-3d-unfold">3d unfold</a>-->
                                 <div class="header__basket-inner">
                                     <a class="header__basket" href="shoping-bag.html">Basket<span>(2)</span></a>
                                     <div class="basket__box">
@@ -118,7 +120,7 @@
                                                 <div class="basket__item">
                                                     <div class="basket__item-left">
                                                         <img src="./images/hover-basket-item-image.jpg"
-                                                            alt="Basket Item">
+                                                             alt="Basket Item">
                                                         <a href="item-details.html">Men Shoes 43</a>
                                                     </div>
                                                     <div class="basket__item-right">
@@ -129,7 +131,7 @@
                                                 <div class="basket__item">
                                                     <div class="basket__item-left">
                                                         <img src="./images/hover-basket-item-image.jpg"
-                                                            alt="Basket Item">
+                                                             alt="Basket Item">
                                                         <a href="item-details.html">Men Shoes 43</a>
                                                     </div>
                                                     <div class="basket__item-right">
@@ -150,11 +152,32 @@
                                 </div>
                                 <a class="header__search_btn" href="#">
                                     <img class="header__search-btn-img"
-                                        src="images/Screenshot 2019-10-31 at 15.41.46.png" alt="">
+                                         src="images/Screenshot 2019-10-31 at 15.41.46.png" alt="">
                                     <input class="search-area" type="text" placeholder="Search">
                                 </a>
                             </menu>
                         </div>
+                    </div>
+                    <div class="login-popup fadeIn animated">
+                        <form>
+                            <h3>LOGIN<span>X</span></h3>
+
+                            <div class="name-inner">
+                                <input type="text" class="inp user_name" placeholder="Your name">
+                            </div>
+                            <div class="password-inner">
+                                <input type="password" class="inp user_password" placeholder="Your password">
+                            </div>
+                            <div class="btn-inner">
+                                <button type="submit" class="order-btn popup__login-btn popup-btn">Login</button>
+                                <span>or</span>
+                                <a href="signup.html" class="popup__signup-btn popup-btn">Sign up</a>
+                                <div>
+                                    <input type="checkbox">
+                                    Forgot your password?
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </header>

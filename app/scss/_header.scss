@@ -211,19 +211,18 @@
                         font-size: 15px;
                     }
                 }
-                .login{
+                .login-btn{
+                    display: none;
                     padding: 10px 20px;
-                    display: none;
-                    background-color: $btn_color;
-                    color: $container-color;
-                }
-                .login__modal{
-                    display: none;
-                    background-color: $black;
-                    .login__input-inner{
-                        input{
-                            padding: 10px;
-                        }
+                    @media (max-width: 820px) {
+                        margin-right: 65px;
+                    }
+                    @media (max-width: 461px) {
+                        margin: 0px 29px;
+                    }
+                    @media (max-width: 370px) {
+                        margin: 0px 29px 0 7px;
+                        padding: 8px 13px;
                     }
                 }
                 .header__basket-inner{
@@ -398,7 +397,7 @@
                     border: 1px solid #959595;
                     transition: all .3s;
                     opacity: 1;
-                    @include main-box-shadow; /* Shadow that used in dropdown hover menus*/
+                    //@include main-box-shadow; /* Shadow that used in dropdown hover menus*/
                     width: 180px;
                     @media (max-width: 730px){
                         right: 1px;
@@ -412,6 +411,47 @@
                     }
                 }
             }
+        }
+    }
+    .login-popup{
+        position: fixed;
+        display: none;
+        transition: all 1s;
+        top: 115px;
+        left: 50%;
+        transform: translate(-50%);
+        padding: 30px 50px;
+        z-index: 9999;
+        background-color: $main_back_gro-col;
+        box-shadow: -49px 59px 77px 1000px rgba(0,0,0,0.48);
+        @media (max-width: 600px) {
+            padding: 15px;
+            min-width: 200px;
+        }
+        .user_name,
+        .user_password{
+            padding: 5px 10px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        h3{
+            font-size: 18px;
+            margin-bottom: 30px;
+            text-align: center;
+            span{
+                position: absolute;
+                right: 15px;
+                top: 15px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+        }
+        button{
+            padding: 10px 15px;
+            margin-bottom: 10px;
+        }
+        .popup__signup-btn{
+            color: $btn_color;
         }
     }
 }

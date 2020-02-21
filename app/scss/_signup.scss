@@ -1,0 +1,28 @@
+.signup__inner{
+    text-align: center;
+    margin-top: 20px;
+    label{
+        display: block;
+        margin-bottom: 10px;
+    }
+    input{
+        width: 33.333%;
+        margin-bottom: 15px;
+        padding: 7px;
+        border: 1px solid $border-color;
+        @media (max-width: 800px) {
+            width: 85%;
+        }
+    }
+    button{
+        padding: 10px 20px;
+        margin: 40px 0;
+    }
+}
+.login{
+    padding: 10px 20px;
+    @media (max-width: 460px) {
+        margin: 0px 19px 0px 7px;
+        padding: 8px 15px;
+    }
+}
